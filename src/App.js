@@ -3,6 +3,7 @@ import './App.css';
 import Axios from 'axios';
 import Nav from './Nav';
 import Home from './Home';
+import All from './All';
 import Newuser from './Newuser';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Login from './Login';
