@@ -5,7 +5,6 @@ import Nav from './Nav';
 import { Link } from 'react-router-dom';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
-import image from './nomovie.jpg';
 
 function Home() {
   const username = localStorage.getItem('username');
