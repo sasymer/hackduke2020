@@ -26,6 +26,9 @@ function Nav() {
             <Link style={navStyle} to='/match'>
                 <li>Find my match</li>
             </Link>
+            <Link style={navStyle} to='/resources'>
+                <li>Resources</li>
+            </Link>
             <Link style ={navStyle} to = '/login'>
                 <li>Logout</li> 
             </Link>
