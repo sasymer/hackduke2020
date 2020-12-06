@@ -39,6 +39,10 @@ function Home() {
             <button onClick = {match} className = 'button2 arrow'>Let's go!</button>
         </float>
         </Col>
+
+        <Col className = 'half-home2'>
+         <img src = {require('./image.png')} />
+        </Col>
       </Grid> 
     </div>
   );

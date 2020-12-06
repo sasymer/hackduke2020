@@ -50,7 +50,7 @@ function Nav() {
                     <Link style={navStyle} to='/resources'>
                         <li>Resources</li>
                     </Link>
-                    <Link style ={navStyle} to = '/login'>
+                    <Link className = 'button4' style ={navStyle} to = '/login'>
                         <li>Login</li> 
                     </Link>
                 </u1>
