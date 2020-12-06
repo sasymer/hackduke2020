@@ -17,13 +17,13 @@ function Nav() {
     return (
         <nav>
             <u1 className="navlinks">
-            <Link style={navStyle} to='/home'>
+            <Link style={navStyle} to='/'>
                 <li>Home</li>
             </Link>
             <Link style={navStyle} to='/all-therapists'>
                 <li>All Therapists</li>
             </Link>
-            <Link style ={navStyle} to = '/'>
+            <Link style ={navStyle} to = '/login'>
                 <li>Logout</li> 
             </Link>
             </u1>
