@@ -18,33 +18,37 @@ export default function Login() {
   }
 
   return (
-    <div className="Login">
-        <h1>Project</h1>
+    <div>
+        <h1>Login</h1>
 
       <form onSubmit={handleSubmit}>
         <FormGroup controlId="username" bsSize="large">
-          <ControlLabel>Username: </ControlLabel>
           <FormControl
+            placeholder = "Username..."
             type="username"
             value={username}
             onChange={e => setUsername(e.target.value)}
           />
         </FormGroup>
         <br></br>
+
         <FormGroup controlId="password" bsSize="large">
-          <ControlLabel>Password: </ControlLabel>
           <FormControl
+            placeholder = "Password..."
             value={password}
             onChange={e => setPassword(e.target.value)}
             type="password"
           />
         </FormGroup>
         <br></br>
+
         <button className = "newb" disabled={!validateForm()} type="submit">
           Login
         </button>
         {" "}
-        <Link to = '/newuser'><button className = "newb"> Register </button></Link>
+        <Link to = '/newuser'>
+            <button className = "newb"> Register </button>
+        </Link>
       </form>
     </div>
   );
