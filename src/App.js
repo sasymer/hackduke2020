@@ -8,7 +8,7 @@ import Newuser from './Newuser';
 import Match from './Match';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Login from './Login';
-import Resources from '/Resources.js';
+import Resources from './Resources.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
