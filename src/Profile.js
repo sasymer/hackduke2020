@@ -25,7 +25,12 @@ function Profile() {
   const faith = localStorage.getItem('faith');
   const types = localStorage.getItem('types');
 
-  let thers = matches.split(",");
+  let thers;
+  if (matches != null && matches.length != 0) {
+    thers = matches.split(",");
+  } else {
+    thers = null;
+  }
 
   let myFormat = 'Teletherapy';
   let myGender = '';
