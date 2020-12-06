@@ -20,8 +20,11 @@ function Nav() {
             <Link style={navStyle} to='/'>
                 <li>Home</li>
             </Link>
-            <Link style={navStyle} to='/all-therapists'>
+            <Link style={navStyle} to='/all'>
                 <li>All Therapists</li>
+            </Link>
+            <Link style={navStyle} to='/match'>
+                <li>Find my match</li>
             </Link>
             <Link style ={navStyle} to = '/login'>
                 <li>Logout</li> 
@@ -29,7 +32,6 @@ function Nav() {
             </u1>
         </nav>   
     );
-
 }
 
 export default Nav;

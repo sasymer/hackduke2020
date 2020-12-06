@@ -5,6 +5,7 @@ import Nav from './Nav';
 import Home from './Home';
 import All from './All';
 import Newuser from './Newuser';
+import Match from './Match';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Login from './Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,6 +19,8 @@ function App() {
             <Route path="/newuser" component={Newuser}/>
             <Route path ="/" component ={Home}/>
             <Route path ="/all" component ={All}/>
+            <Route path ="/match" component ={Match}/>
+            <Route path ="/resources" component ={Match}/>
           </Switch>
       </div>
     </Router>

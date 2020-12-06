@@ -16,7 +16,7 @@ function Newuser() {
         alert('Username or password is empty. Please enter both a username and a password.');
       }
       else {
-          window.location.href = "/login";
+        window.location.href = "/login";
     }}; 
   
   return (
