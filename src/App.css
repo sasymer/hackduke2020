@@ -145,23 +145,31 @@ h1 {
   text-align: left;
 }
 
-.half {
+.half-home {
   width: 50%;
   padding-top: 10%;
   text-align: left;
   float: left;
+  margin-bottom: 20px;
+  padding-bottom: 10%;
+}
+
+.half {
+  width: 50%;
+  padding-top: 5%;
+  text-align: left;
+  float: left;
+  margin-bottom: 20px;
+  padding-bottom: 10%;
 }
 
 .half2 {
   width: 50%;
-  padding-top: 10%;
+  padding-top: 5%;
   text-align: left;
   float: right;
-}
-
-.textt {
-  width: 80%; 
-  margin-left: 10%;
+  margin-bottom: 20px;
+  padding-bottom: 10%;
 }
 
 .motto {
@@ -177,4 +185,17 @@ h1 {
 .arrow {
   float: left;
   margin-top: 50px;
+}
+
+.float2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  width: 95%;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.questions {
+  padding-bottom: 40px;
 }

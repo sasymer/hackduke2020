@@ -28,16 +28,28 @@ function Profile() {
 
       <Grid>
         <Col className = 'half'>
-            <p className = 'textt'> Basic information </p>
-            <div className = 'float'>
-                 
+            <p className = 'textt'> My Profile </p>
+            <div className = 'float2'>
+                <div> 
+                    <h3> Jenny Yoo </h3> 
+                    <p> She/Her/Hers, 20 yr </p>
+                    <p> jenny.yoo@gmail.com </p>
+                    <p> When I was little, I was attacked by a thief
+                        who broke into our house. Recently, I've been having 
+                        major sleep issues and anxiety living on campus. </p>
+                    <p> I am hoping to talk to a therapist who understands my concerns
+                        and can help me overcome the situation. I am an international 
+                        student who studies in the US and I don't have any prior
+                        experience with counceling. I came from a traditional Asian
+                        household that isn't so open to talking about mental health issues. </p>
+                 </div>
             </div>
 
         </Col>
 
         <Col className = 'half2'>
-            <p className = 'textt'> What are you looking for? </p>
-            <div className = 'float'>
+            <p className = 'textt'> My Matches </p>
+            <div className = 'float2'>
                  
             </div>
         </Col>

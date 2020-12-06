@@ -23,7 +23,7 @@ function Home() {
     <div>
       <Nav/>
       <Grid>
-        <Col className = 'half'>
+        <Col className = 'half-home'>
          <h1 className = 'motto'>Find your best mental health professional match</h1>
          
          <float>
