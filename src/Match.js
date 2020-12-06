@@ -101,7 +101,7 @@ function Match() {
               onChange = {setEths}
             />
             <br/>
-            <p> How important is this to you? {genderI.x} </p>
+            <p> How important is this to you? {ethI.x} </p>
             <Slider 
                 axis = "x"
                 xstep={1}

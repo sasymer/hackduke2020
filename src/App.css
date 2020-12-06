@@ -82,7 +82,7 @@ h1 {
 
 .button2{
   display:inline-block;
-  padding:10px;
+  padding:8px;
   margin: 5px;
   border: 2px solid #9171b8;
   border-radius: 5px;
@@ -112,36 +112,9 @@ h1 {
   color: white;
 }
 
-.skinny-dropdown {
-  width: 200px;
-  text-align: center;
-  align-items: center;
-  align-content: center;
-  margin: 20px;
-}
-
 .left {
   align-content: left;
   text-align: left;
-}
-
-.scroll {
-  height: 400px;
-  overflow-y: auto;
-  align-content: center;
-  text-align: center;
-}
-
-.scroll2 {
-  height: 700px;
-  margin: 20px;
-  padding: 20px;
-  overflow-y: auto;
-  max-width: 45%;
-
-  border-radius: 10px;
-  background: whitesmoke;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .invisible {
@@ -170,4 +143,25 @@ h1 {
   margin-left: 10%;
   margin-top: 20px;
   text-align: left;
+}
+
+.half {
+  width: 50%;
+  padding-top: 20%;
+  text-align: left;
+}
+
+.motto {
+  font-size: 60px;
+}
+
+.home-drop {
+  margin-top: 50px;
+  width: 350px;
+  float: left;
+}
+
+.arrow {
+  float: left;
+  margin-top: 50px;
 }

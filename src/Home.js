@@ -9,12 +9,36 @@ import 'react-dropdown/style.css';
 function Home() {
   const username = localStorage.getItem('username');
   const [profileInfo, setProfileInfo] = useState([]);
+  const [city, setCity] = useState("");
+
+  const locs = [
+    'Chicago', 'Durham', 'Houston', 'Los Angeles', 'New York', 'San Francisco'
+  ];
+
+  const match = () => {
+      window.location.href = '/match?city=' + city;
+  }
 
   return (
     <div>
       <Nav/>
-      <h1>Find your best mental health professional match</h1>
-      <p> **insert location dropdown here </p>
+      <Grid>
+        <Col className = 'half'>
+         <h1 className = 'motto'>Find your best mental health professional match</h1>
+         
+         <float>
+            <Dropdown 
+                placeholder = "Select your location"
+                className = 'home-drop'
+                onChange = {(e) => {
+                    setCity(e.value);
+                }}
+                options = {locs}
+            />
+            <button onClick = {match} className = 'button2 arrow'>Let's go!</button>
+        </float>
+        </Col>
+      </Grid> 
     </div>
   );
 }
