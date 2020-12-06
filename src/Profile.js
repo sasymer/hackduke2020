@@ -103,10 +103,8 @@ function Profile() {
                     <p> Faith: {faith} </p>
                     <p> Budget: {budget} </p>
                     <p> Insurance: {insurance} </p>
-
                  </div>
             </div>
-
         </Col>
 
         <Col className = 'half2'>
@@ -121,9 +119,7 @@ function Profile() {
                         <button className = "button3"> Learn more </button>
                     </div>
                 );
-              })}
-
-        
+            })}
         </Col>
       </Grid>
     </div>
