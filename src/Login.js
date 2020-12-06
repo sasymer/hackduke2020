@@ -22,7 +22,7 @@ export default function Login() {
       <form onSubmit={handleSubmit}>
         <FormGroup className = "login-form" controlId="username" bsSize="large">
           <FormControl
-            placeholder = "Username..."
+            placeholder = "Email..."
             type="username"
             value={username}
             onChange={e => setUsername(e.target.value)}

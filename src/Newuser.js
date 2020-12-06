@@ -9,31 +9,44 @@ var adminCode = "wrong";
 function Newuser() {
     const [username, setUsername] = useState('');
     const [pwd, setPwd] = useState('');
-    const [userList, setUserList] = useState([]);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
 
     const submitUser = () => {
-      if (username === undefined || username.length === 0 || pwd === undefined || pwd.length === 0){
-        alert('Username or password is empty. Please enter both a username and a password.');
-      }
-      else {
-        window.location.href = "/login";
-    }}; 
+      window.location.href = "/login";
+    }; 
   
   return (
     <div>
       <h1>Sign up</h1>
       <h2>Thank you for joining us!</h2>
         <div className="form">
-            <label>Username:</label>
-            <input 
+            <input className = "login-form"
+                placeholder = "Full name"
+                type="text" 
+                name="name" 
+                onChange={(e)=> {
+                    setName(e.target.value)
+                }} 
+            />
+            <input className = "login-form"
+                placeholder = "Email address"
+                type="text" 
+                name="email" 
+                onChange={(e)=> {
+                    setEmail(e.target.value)
+                }} 
+            />
+            <input className = "login-form"
+                placeholder = "Username"
                 type="text" 
                 name="username" 
                 onChange={(e)=> {
                     setUsername(e.target.value)
                 }} 
             />
-            <label>Password:</label>
-            <input 
+            <input className = "login-form"
+                placeholder = "Password"
                 type="text" 
                 name="pwd" 
                 onChange={(e)=> {
@@ -41,9 +54,9 @@ function Newuser() {
                 }} 
             />
             <br/>
-            <button className = "newb" onClick = {submitUser}>Submit</button>
+            <button className = "button2" onClick = {submitUser}>Submit</button>
             
-            <Link to = '/login'><button className = "newb"> Back to Login </button></Link>
+            <Link to = '/login'><button className = "button2"> Back to Login </button></Link>
         </div>
     </div>
   );
