@@ -11,6 +11,7 @@ import Slider from 'react-input-slider';
 function Profile() {
   const username = localStorage.getItem('username');
   const matches = localStorage.getItem('matches');
+  const rates = localStorage.getItem('rates');
   const name = localStorage.getItem('myname');
   const email = localStorage.getItem('email');
   const format = localStorage.getItem('format');
@@ -32,6 +33,13 @@ function Profile() {
     thers = null;
   }
 
+  let scores;
+  if (rates != null && rates.length != 0) {
+    scores = rates.split(",");
+  } else {
+    scores = null;
+  }
+
   let myFormat = 'Teletherapy';
   let myGender = '';
   const [myEths, setEths] = useState([]);
@@ -40,13 +48,13 @@ function Profile() {
   const [ethI, setEthI] = useState({x: 0});
 
   const logout = () => {
-      window.location.href = '/';
-      localStorage.setItem('name', '');
+    window.location.href = '/';
+    localStorage.setItem('name', '');
   }
 
   const redirect = () => {
     window.location.href = '/match';
-}
+  }
 
   return (
     <div>
@@ -103,25 +111,19 @@ function Profile() {
 
         <Col className = 'half2'>
             <p className = 'textt'> My Matches </p>
-            <div className = 'float2'>
-                <h4> Anna White, PsyD, MS </h4>
-                <p> Anna is a therapist with 12 years of clinical experience, 
-                    specialized in trauma and anxiety. </p>
-                <button className = "button3"> Learn more </button>
-            </div>
 
-            <div className = 'float2'>
-                <h4> Kate Fan, PsyD, MS </h4>
-                <p> Kate is a therapist with 8 years of clinical experience,
-                    specialized in gender. </p>
-                <button className = "button3"> Learn more</button>
-            </div>
-            <div className = 'float2'>
-                <h4> Jen Brown, MD, PhD </h4>
-                <p> Jen has 4 years of clinical experience and is specialized
-                    in trauma and anxiety. </p>
-                <button className = "button3"> Learn more  </button>
-            </div>
+            {thers.map((ther) => {
+                return (
+                    <div className = 'float2'>
+                        <h4> {ther} </h4>
+                        <p> This is a therapist with 12 years of clinical experience, 
+                            specialized in trauma and anxiety. </p>
+                        <button className = "button3"> Learn more </button>
+                    </div>
+                );
+              })}
+
+        
         </Col>
       </Grid>
     </div>
