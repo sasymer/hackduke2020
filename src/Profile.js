@@ -10,6 +10,7 @@ import Slider from 'react-input-slider';
 
 function Profile() {
   const username = localStorage.getItem('username');
+  const matches = localStorage.getItem('matches');
   const name = localStorage.getItem('myname');
   const email = localStorage.getItem('email');
   const format = localStorage.getItem('format');
@@ -24,6 +25,7 @@ function Profile() {
   const faith = localStorage.getItem('faith');
   const types = localStorage.getItem('types');
 
+  let thers = matches.split(",");
 
   let myFormat = 'Teletherapy';
   let myGender = '';

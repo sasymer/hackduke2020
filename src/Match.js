@@ -381,42 +381,66 @@ function Match() {
     localStorage.setItem('faith', myFaith);
     localStorage.setItem('types', typesArray);
     console.log(p);
+    let result = rateTherapists(p);
+    let thers = [];
+    let rates = [];
+    
+    for (i = 0; i < result.length; i++) {
+      thers.push(result[i][0]);
+      rates.push(result[i][1]);
+    }
+    localStorage.setItem('matches', thers);
+    localStorage.setItem('rates', rates);
 
     window.location.href = '/profile';
   }
 }
 
 function print() {
+  console.log(rateTherapists(p1));
   console.log(printer);
 }
 
 class Person {
 	constructor(firstName, lastName, username, password, email) {
-  	// this.firstName 	= '';
-    // this.lastName 	= '';
-    // this.username 	= '';
-    // this.password 	= '';
-    // this.email 			= '';
+  	this.firstNameVar 	= firstName;
+    this.lastNameVar 	= lastName;
+    this.usernameVar 	= username;
+    this.passwordVar 	= password;
+    this.emailVar			= email;
   }
   
-  get firstName() { return this.firstName; }
-  get lastName() { return this.lastName; }
-  get password() { return this.password; }
-  get username() { return this.username; }
-  get email()    { return this.email; }
+  get firstName() { return this.firstNameVar; }
+  get lastName() { return this.lastNameVar; }
+  get password() { return this.passwordVar; }
+  get username() { return this.usernameVar; }
+  get email()    { return this.emailVar; }
   
-  set firstName(x) {
-    this.firstName = x;
-  }
-  set lastName(x) {
-    this.lastName = x;
-  }
-  set password(x) { this.password = x; }
-  set username(x) { this.username = x; }
-  set email(x) 	  { this.email = x; }
+  set firstName(x) { this.firstNameVar = x; }
+  set lastName(x) { this.lastNameVar = x; }
+  set password(x) { this.passwordVar = x; }
+  set username(x) { this.usernameVar = x; }
+  set email(x) 	  { this.emailVar = x; }
 }
 
 class Therapist extends Person{
+		/*
+    Factors include (all strings except for capacity):
+    	Format: In-person, Teletherapy, Group Therapy
+      Gender served: Male, Female, Non-binary
+      Age served: 0-6, 6-10, 11-13, 14-19, Adults, 65+
+      Price: <75, 75-100, 100-150, 150-200, 200+
+      Issues: [A bunch of issues, how much to include?]
+      Insurances covered: [A bunch of insurances]
+			Ethnicity Served: African-American, Hispanic and Latino, Asian, Native American, 
+      									Pacific Islander, Other racial or Ethnic Background
+      Language: Spanish, French, ASL, German, [others]
+      Sexuality served: Gay, Lesbian, Bisexual
+      Faith: Christian, Buddhist, Jewish, Islam, LDS, Hindu, Sikh, Other
+      Type of Therapy: [A bunch of choices]
+      Capacity: An integer for how many more patients the therapist can take
+      Location: Self-entered
+*/
 	constructor(firstName, lastName, username, password, email, format, gender, age, price, issue, insurance, ethnicity, language, sexuality, faith, therapyType, capacity, location) {
     super(firstName, lastName, username, password, email);
 		this.formatVar = format;
@@ -551,19 +575,22 @@ class Patient extends Person{
     updateWeights() {
     	this.weightsVar = [this.formatWVar, this.genderWVar, this.ageWVar, this.priceWVar, this.issueWVar, this.insuranceWVar, this.ethnicityWVar, this.languageWVar, this.sexualityWVar, this.faithWVar, this.therapyTypeWVar, this.locationWVar];
     }
+    
 }
 
-let th1 = new Therapist('Online', 'Male', 'abcd', 'password', 'tht@tht.org', '50-75', '$$', ['Anxiety', 'Depression'], 'insuranceA', 'White', 'English', 'Gay', 'None', 'Art', 6, 'California')
-let th2 = new Therapist('Online', 'Female', 'qwerty', 'password', 'asdf@duke.edu', '25-50', '$$$', ['PTSD', 'Anxiety'], 'insuranceA', 'Hispanic and Latino', 'English', 'Straight', 'None', 'Cognitive', 4, 'California')
-let p1 = new Patient('Online', 'Male', 'blah', 'password', 'asd@duke.edu', '50-75', '$$', ['Anxiety'], 'insuranceA', 'White', 'English', 'Gay', 'None', 'Art', 'California', 6, 10, 5, 7, 10, 10, 10, 10, 10, 10, 10, 10, 10)
+let th1 = new Therapist('Bob', 'Smith', 'abcd', 'password', 'tht@tht.org', ['Online'], ['Male'], ['50-75'], ['$$'], ['Anxiety', 'Depression'], ['insuranceA'], ['White'], ['English'], ['Gay'], ['None'], ['Art'], 6, ['California']);
+let th2 = new Therapist('Sally', 'Doe', 'qwerty', 'password', 'asdf@duke.edu', ['Online'], ['Female'], ['25-50'], ['$$$'], ['PTSD', 'Anxiety'], ['insuranceA'], ['Hispanic and Latino'], ['English'], ['Straight'], ['None'], ['Cognitive'], 4, ['California']);
+let p1 = new Patient('A', 'Aa', 'blah', 'password', 'asd@duke.edu', ['Online'], ['Male'], ['50-75'], ['$$'], ['Anxiety'], ['insuranceA'], ['White'], ['English'], ['Gay'], ['None'], ['Art'], ['California'], 6, 10, 5, 7, 10, 10, 10, 10, 10, 10, 10, 10, 10);
 
 var allTherapists = [th1, th2];
 
-var comparisonTraits = ['format', 'gender', 'age', 'price', 'issue', 'insurance', 'ethnicity', 'language', 'sexuality', 'faith', 'therapyType', 'location']
+var comparisonTraits = ['format', 'gender', 'age', 'price', 'issue', 'insurance', 'ethnicity', 'language', 'sexuality', 'faith', 'therapyType', 'location'];
 
-for(var i = 0; i < allTherapists.length; i++){
-  var currTherapist = allTherapists[i];
-  //document.write(Object.values(currTherapist));
+
+for(var i = 0; i < allTherapists.length; i++)
+{
+var currTherapist = allTherapists[i];
+//document.write(Object.values(currTherapist));
 }
 
 function rateTherapists(patient) {
@@ -573,41 +600,45 @@ function rateTherapists(patient) {
   // Make weights for all therapists
 	for (var i = 0; i < allTherapists.length; i++) {
   	var score = 0;
-    var misMatch = false
+    var misMatch = false;
   	var therapist = allTherapists[i];
-  	if ((therapist.capacity <= 0) || (patient.format != therapist.format)) {//|| (patient.issue.every(val => therapist.issue.includes(val))) 
+  	if ((therapist.capacity <= 0)) {//|| (patient.issue.every(val => therapist.issue.includes(val))) 
     	misMatch = true;
     	//break;
     }
-    for(var k = 0; k < patient.issue.length; k++){
+    for(var k = 0; k < patient.issue.length; k++)
+    {
     	var currIssue = patient.issue[k];
-      if (! (therapist.issue.includes(currIssue))){
+      if (! (therapist.issue.includes(currIssue)))
+      {
       	misMatch = true;
       }
-    }
+		}
+    for(var k = 0; k < patient.format.length; k++)
+    {
+    	var currIssue = patient.format[k];
+      if (! (therapist.format.includes(currIssue)))
+      {
+      	misMatch = true;
+      }
+		}
     
+    var indicator = [];
     for(var j = 0; j < comparisonTraits.length; j++){
     	var trait = comparisonTraits[j];
-    	var traitW = parseInt(patient[trait + 'W']);
-      //var matching = (therapist[trait] == patient[trait]);
-      var matching = true;
-      for(var currIssue in patient[trait]){
-        if (! (therapist.trait.includes(currIssue))){
-          matching = false;
+      var matching = 1;
+      for (var p = 0; p < patient[trait].length; p++)
+      {
+      	var currTrait = patient[trait][p];
+        if (! (therapist[trait].includes(currTrait)))
+        {
+          matching = 0;
         }
       }
-      
-      if (matching){
-      	score += traitW;
-      }
-      else{
-      	if (traitW < 0) {
-        	misMatch = true;
-          //break;
-        }
-      }
-    
+      indicator.push(matching);
     }
+    score = dotProduct(indicator, weights);
+    //}
     if (misMatch){
     	score = -1;
     }
@@ -615,16 +646,25 @@ function rateTherapists(patient) {
   }
   
   // Sort based on weights
-  ratings.sort(function(a, b){return b[0] - a[0]})//.reverse()
+  ratings.sort(function(a, b){return b[0] - a[0]});//.reverse()
   
-  var sorted = []
+  var sorted = [];
   for (var i = 0; i < ratings.length; i++) {
-  	sorted.push([ratings[i][1].firstName + ' ' + ratings[i][1].lastName, ratings[i][0]])//Divide by max score for percentage value
+  	sorted.push([ratings[i][1].firstName + ' ' + ratings[i][1].lastName, ratings[i][0]]);//Divide by max score for percentage value
   }
  
  	return sorted;
 }
 
+function dotProduct(x, y){
+  var total = 0;
+  for (var i = 0; i < x.length; i++){
+    total += x[i]*y[i];
+  }
+  return total;
+}
+
+console.log(rateTherapists(p1));
 
 //document.write(rateTherapists(p1));
 
