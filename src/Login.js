@@ -13,10 +13,11 @@ export default function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    window.location.href = '/'
   }
 
   return (
-    <div>
+    <div className = 'padtop'>
       <h1>Login</h1>
 
       <form onSubmit={handleSubmit}>
@@ -25,7 +26,10 @@ export default function Login() {
             placeholder = "Email..."
             type="username"
             value={username}
-            onChange={e => setUsername(e.target.value)}
+            onChange={e => {
+              setUsername(e.target.value);
+              localStorage.setItem('name', e.target.value);
+            }}
           />
         </FormGroup>
         <br></br>

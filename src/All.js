@@ -8,13 +8,16 @@ import 'react-dropdown/style.css';
 
 function All() {
   const username = localStorage.getItem('username');
+  const city = localStorage.getItem('city');
 
   return (
     <div>
       <Nav/>
-      <h1>All therapists in your area:</h1>
-      <p> **insert location dropdown here </p>
-      <p> Once loaded, show therapists </p>
+      <div className = "match-head"> 
+        <div className = "match-head-text"> 
+            <h1>All Therapists in {city}</h1>
+        </div>
+      </div>
     </div>
   );
 }

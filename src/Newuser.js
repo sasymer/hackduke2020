@@ -17,7 +17,7 @@ function Newuser() {
     }; 
   
   return (
-    <div>
+    <div className = 'padtop'>
       <h1>Sign up</h1>
       <h2>Thank you for joining us!</h2>
         <div className="form">

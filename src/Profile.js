@@ -17,12 +17,18 @@ function Profile() {
   const [genderI, setGenderI] = useState({x: 0});
   const [ethI, setEthI] = useState({x: 0});
 
+  const logout = () => {
+      window.location.href = '/';
+      localStorage.setItem('name', '');
+  }
+
   return (
     <div>
       <Nav/>
       <div className = "match-head"> 
         <div className = "match-head-text"> 
             <h1>Hi, Jenny!</h1>
+            <button className = 'button2' onClick = {logout}> Logout </button>
         </div>
       </div>
 
@@ -50,7 +56,10 @@ function Profile() {
         <Col className = 'half2'>
             <p className = 'textt'> My Matches </p>
             <div className = 'float2'>
-                 
+                <h3> Anna White, PsyD, MS </h3>
+                <p> Anna is a therapist with 12 years of clinical experience, 
+                    specialized in trauma and anxiety. </p>
+                <button className = "button3"> Learn more -> </button>
             </div>
         </Col>
 

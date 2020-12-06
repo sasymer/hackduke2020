@@ -16,7 +16,7 @@ function Home() {
   ];
 
   const match = () => {
-      window.location.href = '/match?city=' + city;
+      window.location.href = '/all?city=' + city;
   }
 
   return (
@@ -24,7 +24,7 @@ function Home() {
       <Nav/>
       <Grid>
         <Col className = 'half-home'>
-         <h1 className = 'motto'>Find your best mental health professional match</h1>
+         <h1 className = 'motto'>Match with your therapist today. Simpler, faster, better.</h1>
          
          <float>
             <Dropdown 
@@ -32,6 +32,7 @@ function Home() {
                 className = 'home-drop'
                 onChange = {(e) => {
                     setCity(e.value);
+                    localStorage.setItem('city', e.value);
                 }}
                 options = {locs}
             />

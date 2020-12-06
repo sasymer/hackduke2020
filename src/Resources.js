@@ -12,7 +12,11 @@ function Resources() {
   return (
     <div>
       <Nav/>
-      <h1>Resources</h1>
+      <div className = "match-head"> 
+        <div className = "match-head-text"> 
+            <h1>Resources</h1>
+        </div>
+      </div>
     </div>
   );
 }
