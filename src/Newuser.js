@@ -54,9 +54,11 @@ function Newuser() {
                 }} 
             />
             <br/>
-            <button className = "button2" onClick = {submitUser}>Submit</button>
+            <button className = "button2" onClick = {submitUser}>I'm in!</button>
             
-            <Link to = '/login'><button className = "button2"> Back to Login </button></Link>
+            <p>Already a member? <Link to = '/login'> <b> Login </b> </Link> </p>
+            {/** <Link to = '/login'><button className = "button2"> Back to Login </button></Link> 
+            **/}
         </div>
     </div>
   );
