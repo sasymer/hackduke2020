@@ -6,7 +6,7 @@ import Home from './Home';
 import Newuser from './Newuser';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Login from './Login';
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
