@@ -32,10 +32,6 @@ function Nav() {
     else{
         return (
             <nav>
-                <Link to={{ 
-                  pathname: "/Home"}}> 
-                  <img className="logo-img" src={logo}/>
-                </Link>
                 <u1 className="navlinks">
                 <Link style={navStyle} to='/home'>
                     <li>Home</li>
