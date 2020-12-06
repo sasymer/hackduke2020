@@ -12,8 +12,25 @@ function Match() {
   return (
     <div>
       <Nav/>
-      <h1>Find your match</h1>
-      <p> ** insert match form </p>
+      <div className = "match-head"> 
+        <h1>Hi, Ziyi!</h1>
+        <p>We're glad you're here. Please set up your profile here:</p>
+      </div>
+
+      <div className = "float">
+        <h3> What therapy format are you looking for? </h3>
+        
+      </div>
+
+      <div className = "float">
+        <h3> Any preference for the therapist's gender? </h3>
+        
+      </div>
+
+      <div className = "float">
+        <h3> Any preference for the therapist's ethnicity? </h3>
+        
+      </div>
     </div>
   );
 }
