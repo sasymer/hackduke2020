@@ -18,6 +18,29 @@ function All() {
             <h1>All Therapists in {city}</h1>
         </div>
       </div>
+
+      <div className = 'center'>
+        <div className = 'float2'>
+            <h4> Anna White, PsyD, MS </h4>
+            <p> Anna is a therapist with 12 years of clinical experience, 
+                specialized in trauma and anxiety. </p>
+            <button className = "button3"> Learn more </button>
+        </div>
+
+        <div className = 'float2'>
+            <h4> Kate Fan, PsyD, MS </h4>
+            <p> Kate is a therapist with 8 years of clinical experience,
+                specialized in gender. </p>
+            <button className = "button3"> Learn more</button>
+        </div>
+        
+        <div className = 'float2'>
+            <h4> Jen Brown, MD, PhD </h4>
+            <p> Jen has 4 years of clinical experience and is specialized
+                in trauma and anxiety. </p>
+            <button className = "button3"> Learn more  </button>
+        </div>
+      </div>
     </div>
   );
 }

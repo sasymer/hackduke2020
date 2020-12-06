@@ -222,3 +222,7 @@ h1 {
   text-align:center;
   transition-duration: 0.4s;
 }
+
+.center {
+  margin-left: 5%;
+}
