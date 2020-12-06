@@ -21,7 +21,7 @@ function Home() {
   return (
     <div>
       <Nav/>
-      <h1>Welcome {username}!</h1>
+      <h1>Find your best mental health professional match</h1>
       {profileInfo.map((val) => {
         var date = val.date_created.split("T");
         date = date[0];
@@ -32,6 +32,7 @@ function Home() {
         </p>
         );
       })}
+    <p> **insert location dropdown here </p>
     </div>
   );
 }

@@ -12,7 +12,6 @@ function Newuser() {
     const [userList, setUserList] = useState([]);
 
     const submitUser = () => {
-      console.log("admincode: " + adminCode + " | " + type);
       fetch("/api/checkuser?id=" + username)
       .then(response => response.json())
       .then(data => {
@@ -44,7 +43,6 @@ function Newuser() {
           }
         }
       });   
-      
     };
 
     function displayCode() {
@@ -57,7 +55,6 @@ function Newuser() {
       }
   }
   
-
   return (
     <div>
       
