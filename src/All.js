@@ -8,7 +8,10 @@ import 'react-dropdown/style.css';
 
 function All() {
   const username = localStorage.getItem('username');
-  const city = localStorage.getItem('city');
+  let city = localStorage.getItem('city');
+  if (city == "" || city == null) {
+    city = "Your City";
+  }
 
   return (
     <div>
