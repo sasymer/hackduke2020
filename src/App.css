@@ -147,8 +147,21 @@ h1 {
 
 .half {
   width: 50%;
-  padding-top: 20%;
+  padding-top: 10%;
   text-align: left;
+  float: left;
+}
+
+.half2 {
+  width: 50%;
+  padding-top: 10%;
+  text-align: left;
+  float: right;
+}
+
+.textt {
+  width: 80%; 
+  margin-left: 10%;
 }
 
 .motto {

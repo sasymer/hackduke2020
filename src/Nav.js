@@ -24,8 +24,8 @@ function Nav() {
                 <Link style={navStyle} to='/resources'>
                     <li>Resources</li>
                 </Link>
-                <Link style ={navStyle} to = '/login'>
-                    <li>Logout</li> 
+                <Link style ={navStyle} to = '/profile'>
+                    <li>Profile</li> 
                 </Link>
             </u1>
         </nav>   

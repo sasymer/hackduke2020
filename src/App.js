@@ -5,6 +5,7 @@ import Nav from './Nav';
 import Home from './Home';
 import All from './All';
 import Newuser from './Newuser';
+import Profile from './Profile';
 import Match from './Match';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Login from './Login';
@@ -22,6 +23,7 @@ function App() {
             <Route path ="/all" component ={All}/>
             <Route path ="/match" component ={Match}/>
             <Route path ="/resources" component ={Resources}/>
+            <Route path ="/profile" component ={Profile}/>
           </Switch>
       </div>
     </Router>
