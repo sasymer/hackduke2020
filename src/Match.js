@@ -14,6 +14,8 @@ function Match() {
   let myGender = '';
   const [myEths, setEths] = useState([]);
   const [formatI, setFormatI] = useState({x: 0});
+  const [genderI, setGenderI] = useState({x: 0});
+  const [ethI, setEthI] = useState({x: 0});
 
   const format = [
     'In-person', 'Teletherapy', 'Group Therapy'
@@ -79,6 +81,16 @@ function Match() {
                 myGender = e.value;
               }}
             />
+            <br/>
+            <p> How important is this to you? {genderI.x} </p>
+            <Slider 
+                axis = "x"
+                xstep={1}
+                xmin={0}
+                xmax={10}
+                x={genderI.x}
+                onChange={({ x }) => setGenderI({ x: x})}
+            />
         </div>
 
         <div className = "float">
@@ -87,6 +99,16 @@ function Match() {
               options={eth}
               value = {myEths}
               onChange = {setEths}
+            />
+            <br/>
+            <p> How important is this to you? {genderI.x} </p>
+            <Slider 
+                axis = "x"
+                xstep={1}
+                xmin={0}
+                xmax={10}
+                x={ethI.x}
+                onChange={({ x }) => setEthI({ x: x})}
             />
         </div>
       </div>
