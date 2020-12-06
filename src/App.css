@@ -151,7 +151,12 @@ h1 {
   background-color:#9171b8;
   color: black;
   width: 100%;
-  height: 400px;
+  height: 200px;
+}
+
+.match-head-text {
+  margin: 20px;
+  text-align: left;
 }
 
 .float {

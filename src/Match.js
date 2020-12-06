@@ -13,22 +13,24 @@ function Match() {
     <div>
       <Nav/>
       <div className = "match-head"> 
-        <h1>Hi, Ziyi!</h1>
-        <p>We're glad you're here. Please set up your profile here:</p>
+        <div className = "match-head-text"> 
+            <h1>Hi, Ziyi!</h1>
+            <p>We're glad you're here. Please set up your profile:</p>
+        </div>
       </div>
 
       <div className = "float">
-        <h3> What therapy format are you looking for? </h3>
+        <p> What therapy format are you looking for? </p>
         
       </div>
 
       <div className = "float">
-        <h3> Any preference for the therapist's gender? </h3>
+        <p> Any preference for the therapist's gender? </p>
         
       </div>
 
       <div className = "float">
-        <h3> Any preference for the therapist's ethnicity? </h3>
+        <p> Any preference for the therapist's ethnicity? </p>
         
       </div>
     </div>
