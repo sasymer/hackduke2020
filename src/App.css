@@ -1,38 +1,249 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.login-form {
+  width: 100% ;
+  max-width: 500px;
+  padding: 15px;
+  margin: auto;
+  height: 100%;
+  align-items:center
+}
+
+.title {
+  font-weight: bold;
+}
+
+body, html, #root, .login, .container {
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  width: 100%;
+  min-width: 280px;
+  color: #565656;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border: solid 2px #1189de;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+}
+.App{
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav{
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 10vh;
+  background: #c9d6ff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navlinks{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form input {
+  width: 300px;
+  height: 60px;
+  margin: 10px;
+}
+
+.search {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.search input {
+  width: 500px;
+  height: 40px;
+  margin: 10px;
+}
+
+.rating-input {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.review-input {
+  width: 200px;
+  height: 50px;
+  margin: 10px;
+}
+
+.resultsBox {
+  padding: 5px;
+  text-align: left;
+  height: 1000px;
+  width: 1000px;
+  overflow-y: auto;
+}
+
+.b{
+  width: 50px;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+.newb{
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid #3682d8;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-size: 16px;
+  font-weight:300;
+  color:#3682d8;
+  text-align:center;
+  transition: all 0.2s;
+  background-color: white;
+}
+
+.newb:hover{
+  color:#FFFFFF;
+  background-color:#3682d8;
+}
+
+.button{
+  background-color: white;
+  font-size: 15px;
+  transition-duration: 0.4s;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color:#2376c4; 
+  color: white;
+}
+
+.movie-img {
+  width: 70px;
+  margin: 10px;
+}
+
+.icon-img {
+  width: 40px;
+  margin: 10px;
+}
+
+.logo-img {
+  width: 50px;
+  margin: 10px;
+}
+
+.movie-page-img {
+  width: 200px;
+  padding: 20px;
+}
+
+.movie-block {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+}
+
+.movie-info {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+.movie-text {
+  padding: 10px;
+  float:right;
+  text-align: right;
+}
+
+.movie-span {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.skinny-dropdown {
+  width: 200px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  margin: 20px;
+}
+
+.left {
+  align-content: left;
+  text-align: left;
+}
+
+.search-section {
+  border-radius: 10px;
+  background: whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  margin: 10px;
+  height: 440px;
+  align-content: center;
+  text-align:center;
+}
+
+.scroll {
+  height: 400px;
+  overflow-y: auto;
+  align-content: center;
+  text-align: center;
+}
+
+.scroll2 {
+  height: 700px;
+  margin: 20px;
+  padding: 20px;
+  overflow-y: auto;
+  max-width: 45%;
+
+  border-radius: 10px;
+  background: whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.friend-search-section {
+  border-radius: 10px;
+  background: whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  margin: 10px;
+  height: 500px;
+  align-content: center;
+  text-align:center;
+}
+
+.invisible {
+  display: none;
 }
